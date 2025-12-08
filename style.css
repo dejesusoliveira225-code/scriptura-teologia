@@ -2,3 +2,12 @@
     padding: 0px;
     width: 0px;
 }
+
+a{
+    text-decoration: none;
+}
+
+.logo img{
+   width: 200px;
+   height: 200px;
+}
