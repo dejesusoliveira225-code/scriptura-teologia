@@ -1,13 +1,120 @@
 *{
     padding: 0px;
-    width: 0px;
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0px auto;
+    width: auto;
+    min-width: 1100px;
 }
 
 a{
     text-decoration: none;
 }
+ /********************BARRA-NAVEGACAO*****************/
 
-.logo img{
-   width: 200px;
-   height: 200px;
+.login{
+    float: left;
+    font-weight: bold;
+}
+
+nav a{
+    margin: 0 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    background: midnightblue;
+}
+
+nav a:hover{
+    background: rgb(27, 128, 230);
+    transition: 0.5s;
+}
+
+#barra-navegacao{
+    text-align: right;
+    padding: 25px;
+    background: rgba(123, 101, 73, 0.329);
+}
+
+
+/************************CONTEUDO-LOGO*****************************/
+
+#logo{
+    min-width: 100hv;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    height: 530PX;
+   
+}
+
+#logo::before{
+    content: '';
+    background-image: url(./img/Gemini_Generated_Image_ta00b0ta00b0ta00.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.25;
+}
+
+#logo img{
+   width: 250px;
+   height: 250px;
+   margin-top: 100px;
+   position: relative;
+}
+
+#logo h1{
+    margin-top: 25px;
+    position: relative;
+    font-weight: bolder;
+}
+
+/*******************SOBRE-NOS***************/
+
+#sobre-nos{
+    margin: 25px auto;
+    text-align: justify;
+    width: 900px;
+}
+
+/*******************RODAPE**********************/  
+
+footer{
+    padding: 25px;
+
+    background:rgba(123, 101, 73, 0.329);
+    display: flex;
+}
+
+footer img{
+    width: 50px;
+    height: 50px;
+}
+
+#footer-contato{
+    width: 100px;
+    height: 100px;
+    text-align: right;
+    border: blue solid 1px;
+}
+
+#footer-logo{
+    text-align: center;
+    align-items: center;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    border: rgb(255, 0, 0) solid 1px;
 }
