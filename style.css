@@ -26,13 +26,13 @@ nav a{
     font-weight: bold;
     border-radius: 5px;
     padding: 8px 15px;
-    color: white;
-    background: midnightblue;
+    color: #fafafa;
+    background: #0d2440;
 }
 
 nav a:hover{
-    background: rgb(27, 128, 230);
-    transition: 0.5s;
+    background: #7ba4d0;
+    transition: 0.3s;
 }
 
 #barra-navegacao{
@@ -51,6 +51,7 @@ nav a:hover{
     align-items: center;
     position: relative;
     height: 530PX;
+    background-color:  #e7f0fa;
    
 }
 
@@ -89,7 +90,85 @@ nav a:hover{
     margin: 25px auto;
     text-align: justify;
     width: 900px;
+    padding: 50px;
 }
+
+/********************orientadores*********************/
+
+#orientadores{
+    padding: 50px 10px 50px 10px;
+    height: 580px;
+    text-align: center;
+    background: #e7f0fa;
+}
+
+#cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    font-size: 0.6em;
+    text-align: center;
+    margin: 50px 10px 0px 10px;
+    padding: 15px;
+    width: 200px;
+    height: 320px;
+    background: white;
+    border: solid #0d2440 2px;
+    border-radius: 10px;
+}
+
+.descricao{
+    background-color: rgba(255, 255, 255, 0.774);
+    border: #7ba4d0 solid 2px;
+    border-radius: 10px;
+    height: 100px;
+    margin-top: 200px;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+.descricao h2{
+    font-size: 15px;
+}
+.descricao p{
+    margin-top: 5px;
+}
+
+#bruno{
+    background-color: white;
+    background-image: url(./img/bruno.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+}
+
+#rebeca{
+    background-color: white;
+    background-image: url(./img/rebeca.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+}
+
+#sergio{
+     background-color: white;
+    background-image: url(./img/sergio.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+}
+
+#walberto{
+    background-color: white;
+    background-image: url(./img/walberto.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+}
+
+
 
 /*******************RODAPE**********************/  
 
@@ -134,4 +213,7 @@ footer a img:hover{
 
 #fim{
     text-align: center;
+    font-size: 0.8em;
+    padding: 25px;
 }
+
