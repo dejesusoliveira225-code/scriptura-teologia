@@ -7,158 +7,187 @@
     <link rel="stylesheet" href="./style_matricula.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <img src="./img/logo.png" alt="SCRIPTURA INSTITUTO TEOLÓGICO">
-            <h2>Formulário de Matrícula</h2>
-        </div>
-    </nav>
+    <main>
+        <nav>
+            <div class="logo">
+                <img src="./img/logo.png" alt="SCRIPTURA INSTITUTO TEOLÓGICO">
+                <h2>Formulário de Matrícula</h2>
+            </div>
+        </nav>
 
-    <section id="formulario">
-        <form>
-            <Fieldset class="info1">
-                <h2>Informações Pessoais</h2>
-                <br><br>
-                <div class="campo">
-                    <label for=""><strong>Nome Completo:</strong></label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome Completo">
-                </div>
+        <section id="formulario">
+            <form>
+                <Fieldset id="info1">
+                    <h2>Informações Pessoais</h2>
+                    <br><br>
+                    <div class="campo">
+                        <label for=""><strong>Nome Completo:</strong></label>
+                        <input type="text" name="nome" id="nome" placeholder="Nome Completo" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Telefone/WhatsApp:</strong></label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>Telefone/WhatsApp:</strong></label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>RG:</strong></label>
-                    <input type="number" name="rg" id="rg" placeholder="XX.XXX.XXX-XX">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>RG:</strong></label>
+                        <input type="number" name="rg" id="rg" placeholder="XX.XXX.XXX-XX" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Orgão Expedidor:</strong></label>
-                    <input type="text" name="orgao_expedidor" id="orgao_expedidor" placeholder="SSP">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>Orgão Expedidor:</strong></label>
+                        <input type="text" name="orgao_expedidor" id="orgao_expedidor" placeholder="SSP" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>UF:</strong></label>
-                    <input type="text" name="uf" id="uf" placeholder="BA">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>UF:</strong></label>
+                        <input type="text" name="uf" id="uf" placeholder="BA" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>CPF:</strong></label>
-                    <input type="number" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>CPF:</strong></label>
+                        <input type="number" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Nome do Pai:</strong></label>
-                    <input type="text" name="pai" id="pai" placeholder="Nome do Pai">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>Nome do Pai:</strong></label>
+                        <input type="text" name="pai" id="pai" placeholder="Nome do Pai">
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Nome da Mãe:</strong></label>
-                    <input type="text" name="mae" id="mae" placeholder="Nome da Mãe">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>Nome da Mãe:</strong></label>
+                        <input type="text" name="mae" id="mae" placeholder="Nome da Mãe">
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Data de Nascimento:</strong></label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" placeholder="XX/XX/XXXX">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>Data de Nascimento:</strong></label>
+                        <input type="date" name="data_nascimento" id="data_nascimento" placeholder="XX/XX/XXXX" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Naturalidade:</strong></label>
-                    <input type="text" name="naturalidade" id="naturalidade" placeholder="Santaluz-BA">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>Naturalidade:</strong></label>
+                        <input type="text" name="naturalidade" id="naturalidade" placeholder="Santaluz-BA">
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Sexo:</strong></label>
-                        <label for=""><input type="radio" name="sexo" value="masculino"> Masculino
-                    </label>
-
-                    <label for="">
-                        <input type="radio" name="sexo" value="feminino"> Feminino
-                    </label>
-                </div>
-
-                <div class="campo">
-                    <label for=""><strong>Estado Cívil:</strong></label>
-                        <label for="">
-                            <input type="radio" name="estado_civil" value="solteiro"> Solteiro
+                    <div class="campo">
+                        <label for=""><strong>Sexo:</strong></label>
+                            <label for=""><input type="radio" name="sexo" value="masculino"> Masculino
                         </label>
 
                         <label for="">
-                            <input type="radio" name="estado_civil" value="casado"> Casado
+                            <input type="radio" name="sexo" value="feminino"> Feminino
                         </label>
+                    </div>
 
-                        <label for="">
-                            <input type="radio" name="estado_civil" value="divorciado"> Divorciado
-                    </label>
-                </div>
-            </fieldset>
+                    <div class="campo">
+                        <label for=""><strong>Estado Cívil:</strong></label>
+                            <label for="">
+                                <input type="radio" name="estado_civil" value="solteiro"> Solteiro
+                            </label>
 
-            <fieldset class="info2">
-                <h2>Informações Extras</h2>
-                <BR></BR>
-                <div class="campo">
-                    <label for=""><strong>Profissão:</strong></label>
-                    <input type="text" name="profissao" id="profissao" placeholder="Recepcionista/Pedreiro">
-                </div>
+                            <label for="">
+                                <input type="radio" name="estado_civil" value="casado"> Casado
+                            </label>
 
-                <div class="campo">
-                    <label for=""><strong>Escolaridade:</strong></label>
-                    <input type="text" name="escolaridade" id="escolaridade" placeholder="Ensino Médio">
-                </div>
+                            <label for="">
+                                <input type="radio" name="estado_civil" value="divorciado"> Divorciado
+                        </label>
+                    </div>
+                </fieldset>
 
-                <div class="campo">
-                    <label for=""><strong>Formação:</strong></label>
-                    <input type="text" name="formacao" id="formacao" placeholder="Graduado(a)/Licenciado(a)">
-                </div>
+                <fieldset id="info2">
+                    <h2>Informações Extras</h2>
+                    <BR></BR>
+                    <div class="campo">
+                        <label for=""><strong>Profissão:</strong></label>
+                        <input type="text" name="profissao" id="profissao" placeholder="Recepcionista/Pedreiro">
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Endereço:</strong></label>
-                    <input type="text" name="endereco" id="endereco" placeholder="Nome da Rua, número da casa">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>Escolaridade:</strong></label>
+                        <input type="text" name="escolaridade" id="escolaridade" placeholder="Ensino Médio" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Bairro:</strong></label>
-                    <input type="text" name="bairro" id="bairro" placeholder="Centro">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>Formação:</strong></label>
+                        <input type="text" name="formacao" id="formacao" placeholder="Graduado(a)/Licenciado(a)" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>Cidade:</strong></label>
-                    <input type="text" name="cidade" id="cidade" placeholder="Santaluz">
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>Endereço:</strong></label>
+                        <input type="text" name="endereco" id="endereco" placeholder="Nome da Rua, número da casa" required>
+                    </div>
 
-                <div class="campo">
-                    <label for=""><strong>CEP:</strong></label>
-                    <input type="number" name="cep" id="cep" placeholder="48880-000">
-                </div>
-            </fieldset>
+                    <div class="campo">
+                        <label for=""><strong>Bairro:</strong></label>
+                        <input type="text" name="bairro" id="bairro" placeholder="Centro" required>
+                    </div>
 
-            <fieldset class="clear">
-                <h2>Informações Relacionadas ao Curso</h2>
-                <div class="campo">
-                    <label for=""><strong>Denominação:</strong></label>
-                    <input type="text" name="denominacao" id="denominacao" placeholder="Assembleia de Deus">
-                </div>
-            </fieldset>
+                    <div class="campo">
+                        <label for=""><strong>Cidade:</strong></label>
+                        <input type="text" name="cidade" id="cidade" placeholder="Santaluz" required>
+                    </div>
 
-            <fieldset>
-                <div class="campo">
-                    <label for=""><strong>Deixe um breve comentario do que você pensa sobre o curso:</strong></label>
-                    <textarea name="comentario" id="comentario" cols="30" rows="5"></textarea>
-                </div>
+                    <div class="campo">
+                        <label for=""><strong>CEP:</strong></label>
+                        <input type="number" name="cep" id="cep" placeholder="48880-000" required>
+                    </div>
+                </fieldset>
+
+                <fieldset id="info3" class="clear">
+                    <h2>Informações Relacionadas ao Curso</h2>
+                    <div class="campo">
+                        <label for=""><strong>Denominação:</strong></label>
+                        <input type="text" name="denominacao" id="denominacao" placeholder="Assembleia de Deus" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div id="texto" class="campo">
+                        <label for=""><strong>Deixe um breve comentario do que você pensa sobre o curso:</strong></label>
+                        <textarea name="comentario" id="comentario" cols="30" rows="5"></textarea>
+                    </div>
+                </fieldset>
 
                 <label for="termos">
-                    <input type="checkbox" name="termos" id="termos">
+                    <input type="checkbox" name="termos" id="termos" required>
                     Estou de acordo com o Projeto do Curso.
                 </label>
+
+                <div class="botao">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-scriptura">
+            <img src="./img/logo.png">
+            <h4>SCRIPTURA INSTITUTO TEOLÓGICO</h4>
+            <h4>CNPJ Mantenedora: 63.103.360/0001-39</h4>
+            <h4>ADLUZ - Assembleia de Deus de Santaluz-BA</h4>
+            <a href="https://w.app/ra5neu" target="_blank"><img src="./img/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+
+        <div id="ADLUZ">
+            <img src="./img/adluz.png" alt="">
+            <h4>ADLUZ - Assembleia de Deus de Santaluz-BA</h4>
+            <h4>A Igreja que ora pela sua Família</h4>
+            <h4>Largo do Tanque Grande, Santaluz-BA </h4>
+            <a href="http://wa.me/message/27QRZXSGWZMZH1" target="_blank"><img src="./img/whatsapp.png" alt="WhatsApp"></a>
+            <a href="https://www.instagram.com/adluzoficial/" target="_blank"><img src="./img/instagram_logo_icon_186894 (1).png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/adluzoficial" target="_blank"><img src="./img/images.png" alt="Facebook"></a>
+        </div>
                 
-            </fieldset>
-            <div class="botao">
-                <input type="submit" value="Enviar">
-            </div>
-        </form>
-    </section>
+            
+    </footer>
+
+    <div id="fim">
+        <h4>&copy; 2025 Scriptura Instituto Teológico</h4>
+        <h4>Todos os direitos reservados</h4>
+    </div>
 
 </body>
 </html>
