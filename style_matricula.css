@@ -4,11 +4,21 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body{
+    background: #7ba4d01a;
+}
+
 main{
+    border: black solid 1px;
     font-size: 1em;
     margin: 0px auto;
     min-width: 800px;
     width: 800px;
+    background-image: url(./img/luxa.org-opacity-changed-._backgorud.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    padding-bottom: 200px;
 }
 
 .clear{
@@ -16,11 +26,12 @@ main{
 }
 /************************* Estilo para o formulário de matrícula *************/
 nav{
-    margin: 40px;
+    padding: 40px;
 }
 
 .logo{
     text-align: center;
+    padding-bottom: 50px;
 }
 .logo img{
     width: 60px;
@@ -29,13 +40,14 @@ nav{
 
 #info1{
     float: left;
-    padding: 25px 120px 25px 70px;
+    padding: 25px 120px 0px 10px;
+    width: 180px;
 }
     
 #info2{
     float: right;
-    width: auto;
-    padding: 25px 120px 497px 70px;
+    width: 180px;
+    padding: 25px 120px 450px 10px;
 }
 
 #info3 label{
@@ -67,16 +79,20 @@ input{
 }
 
 .campo{
-    margin-bottom: 1em;
-   
+    margin-bottom: 1.2em;
 }
 
-.campo label{
+.campo label, label{
     margin-bottom: 0.2em;
     display: block;
+    color: red;
 }
 
-.campo input[type="text"], .campo input[type="number"], .campo input[type="tel"], .campo input[type="date"], .campo input[type="email"], textarea{
+strong{
+    color: black;
+}
+
+.campo input[type="text"], .campo input[type="tel"], .campo input[type="date"], .campo input[type="email"], textarea{
     padding: 0.5em;
     border: 2px solid #0d2440;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -87,18 +103,18 @@ input{
 }
 
 .botao input{
-    position: relative;
-    right: 50%;
-    left: 50%;
+    margin: 40px 300px 40px 350px;
     font-size: 1.2em;
-    border: 0;
+    border: solid 2px #0d2440;
     padding: 0.2em 0.6em;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .botao input:hover{
-    background: #7ba4d0;
+    transition: 0.3s;
+    color: white;
+    background: #0d2440;
 }
 
 .centro{
@@ -111,6 +127,7 @@ input{
 }
 
 textarea{
+    border-radius: 5px;
     width: 98%;
     padding: 0.5em;
     border: 2px solid #0d2440;
@@ -120,7 +137,7 @@ textarea{
 /*******************RODAPE**********************/  
 
 footer{
-    margin-top: 150px;
+  
     padding: 25px;
     background:rgba(123, 101, 73, 0.137);
     display: flex;
