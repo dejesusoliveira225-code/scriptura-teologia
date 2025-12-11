@@ -1,0 +1,83 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    font-size: 1em;
+    margin: 0px auto;
+    min-width: 800px;
+    width: 800px;
+}
+
+.clear{
+    clear: both;
+}
+/************************* Estilo para o formulário de matrícula *************/
+nav{
+    margin: 40px;
+}
+
+.logo{
+    text-align: center;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+
+form .info1{
+    float: left;
+    padding: 25px 120px 25px 70px;
+}
+    
+form .info2{
+    float: right;
+    width: auto;
+    padding: 25px 120px 497px 70px;
+}
+
+fieldset{
+    padding: 20px;
+}
+fieldset h2{
+    font-size: 20px;
+}
+
+input{
+    border-radius: 5px;
+}
+
+.campo{
+    margin-bottom: 1em;
+    display: block;
+}
+
+.campo label{
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+.campo input[type="text"], .campo input[type="number"], .campo input[type="tel"], .campo input[type="date"], .campo input[type="email"], textarea{
+    padding: 0.5em;
+    border: 2px solid #0d2440;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    
+
+.campo input:focus, textarea:focus{
+    background-color: #429cfc21;
+}
+
+.botao input{
+    font-size: 1.2em;
+    border: 0;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    
+}
+
+.botao input:hover{
+    background: #7ba4d0;
+}

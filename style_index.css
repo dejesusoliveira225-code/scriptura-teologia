@@ -123,7 +123,7 @@ nav a:hover{
     background-color: rgba(255, 255, 255, 0.774);
     border: #7ba4d0 solid 2px;
     border-radius: 10px;
-    height: 100px;
+    height: 118px;
     margin-top: 200px;
     padding: 5px;
     font-size: 1.2em;
@@ -133,7 +133,7 @@ nav a:hover{
     font-size: 15px;
 }
 .descricao p{
-    margin-top: 5px;
+    font-size: 13px;
 }
 
 #bruno{
@@ -147,6 +147,14 @@ nav a:hover{
 #rebeca{
     background-color: white;
     background-image: url(./img/rebeca.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center bottom;
+}
+
+#ronivon{
+    background-color: white;
+    background-image: url(./img/RONIVON-FOTO.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center bottom;
@@ -216,4 +224,3 @@ footer a img:hover{
     font-size: 0.8em;
     padding: 25px;
 }
-
