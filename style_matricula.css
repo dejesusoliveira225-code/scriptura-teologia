@@ -1,183 +1,222 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* ===============================
+RESET E BASE
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-body{
-    background: #7ba4d01a;
+body {
+    background: #F4F6F8;
+    color: #162447;
 }
 
-main{
-    border: black solid 1px;
-    font-size: 1em;
-    margin: 0px auto;
-    min-width: 800px;
-    width: 800px;
-    background-image: url(./img/luxa.org-opacity-changed-._backgorud.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
-    padding-bottom: 200px;
-}
-
-.clear{
-    clear: both;
-}
-/************************* Estilo para o formulário de matrícula *************/
-nav{
-    padding: 40px;
-}
-
-.logo{
-    text-align: center;
-    padding-bottom: 50px;
-}
-.logo img{
-    width: 60px;
-    height: 60px;
-}
-
-#info1{
-    float: left;
-    padding: 25px 120px 0px 10px;
-    width: 180px;
-}
-    
-#info2{
-    float: right;
-    width: 180px;
-    padding: 25px 120px 450px 10px;
-}
-
-#info3 label{
-    margin-bottom: 0.2em;
-    display: block;
-}
-
-#info3 input{
-    padding: 0.5em;
-    border: 2px solid #0d2440;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#info3 h2{
-    text-align: center;
-    padding-bottom: 10px;
-}
-fieldset{
+/* ===============================
+NAVBAR
+=============================== */
+nav {
+    background: linear-gradient(90deg, #1f3d8807, #5282fd93);
     padding: 20px;
-    border: none;
-    border-top: #0d2440 1px solid;
-}
-fieldset h2{
-    font-size: 20px;
+    color: #000000;
 }
 
-input{
-    border-radius: 5px;
-}
-
-.campo{
-    margin-bottom: 1.2em;
-}
-
-.campo label, label{
-    margin-bottom: 0.2em;
-    display: block;
-    color: red;
-}
-
-strong{
-    color: black;
-}
-
-.campo input[type="text"], .campo input[type="tel"], .campo input[type="date"], .campo input[type="email"], textarea{
-    padding: 0.5em;
-    border: 2px solid #0d2440;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.campo input:focus, textarea:focus{
-    background-color: #c1dcfc50;
-}
-
-.botao input{
-    margin: 40px 300px 40px 350px;
-    font-size: 1.2em;
-    border: solid 2px #0d2440;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    text-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.botao input:hover{
-    transition: 0.3s;
-    color: white;
-    background: #0d2440;
-}
-
-.centro{
-    text-align: center;
-}
-
-#texto label{
-    padding-bottom: 15px;
-    text-align: center;
-}
-
-textarea{
-    border-radius: 5px;
-    width: 98%;
-    padding: 0.5em;
-    border: 2px solid #0d2440;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/*******************RODAPE**********************/  
-
-footer{
-  
-    padding: 25px;
-    background:rgba(123, 101, 73, 0.137);
+nav .logo {
     display: flex;
-    justify-content: space-evenly;
-    font-size: 0.8em;
-}
-
-footer img{
-    width: 80px;
-    height: 80px;
-    background-color: rgba(255, 255, 255, 0.685);
-    border-radius: 50%;
-}
-
-
-
-#footer-scriptura{
-    text-align: center;
     align-items: center;
+    gap: 15px;
 }
 
+nav img {
+    height: 65px;
 
-#ADLUZ{
+}
+
+nav h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* ===============================
+FORMULÁRIO
+=============================== */
+#formulario {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+form {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(31,60,136,0.15);
+}
+
+/* ===============================
+FIELDSET
+=============================== */
+fieldset {
+    border: none;
+    margin-bottom: 35px;
+}
+
+fieldset h2 {
+    font-size: 20px;
+    color: #1F3C88;
+    margin-bottom: 20px;
+    border-left: 6px solid #1EB6E8;
+    padding-left: 12px;
+}
+
+/* ===============================
+CAMPOS
+=============================== */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.campo label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #162447;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 13px 15px;
+    border-radius: 10px;
+    border: 1px solid #CCD6E0;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #1EB6E8;
+    box-shadow: 0 0 0 3px rgba(30,182,232,0.25);
+}
+
+/* ===============================
+TERMOS
+=============================== */
+.termos {
+    margin: 25px 0;
+}
+
+.termos label {
+    font-size: 14px;
+    color: #162447;
+}
+
+/* ===============================
+BOTÕES
+=============================== */
+.botao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.botao input[type="submit"],
+.botao button {
+    padding: 15px 26px;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botão principal */
+.botao input[type="submit"] {
+    background: linear-gradient(90deg, #1F3C88, #1EB6E8);
+    color: #fff;
+}
+
+.botao input[type="submit"]:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* WhatsApp */
+.botao button {
+    background: #1F3C88;
+    color: #fff;
+}
+
+.botao button:hover {
+    background: #1F3C88;
+    transform: translateY(-1px);
+}
+
+/* ===============================
+FOOTER
+=============================== */
+footer {
+    background: #1F3C88;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 35px 20px;
+}
+
+footer img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+footer h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+footer a img {
+    height: 34px;
+    margin: 8px;
+}
+
+/* ===============================
+RODAPÉ FINAL
+=============================== */
+#fim {
+    background: #162447;
+    color: #fff;
     text-align: center;
+    padding: 15px;
+    font-size: 13px;
 }
 
-footer a img{
-    width: 38px;
-    height: 38px;
-    margin: 15px;
-    filter: brightness(0.7);
-}
+/* ===============================
+RESPONSIVO
+=============================== */
+@media (max-width: 768px) {
+    nav .logo {
+        flex-direction: column;
+        text-align: center;
+    }
 
-footer a img:hover{
-    filter: brightness(1);
-    transition: 0.3s;
-}
+    .botao {
+        flex-direction: column;
+    }
 
-#fim{
-    text-align: center;
-    font-size: 0.8em;
-    padding: 25px;
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
