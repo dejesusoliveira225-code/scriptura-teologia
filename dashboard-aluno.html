@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
+    <link rel="stylesheet" href="./dashboard.css">
+    </head>
+        <body>
+
+            <h2>Minhas Notas</h2>
+
+            <ul id="lista"></ul>
+
+            <div id="paginacao"></div>
+
+            <button id="btnPDF">Baixar boletim PDF</button>
+
+            <canvas id="grafico" width="300" height="200" style="background:white;margin:15px auto;display:block;"></canvas>
+
+            <button onclick="logout()">Sair</button>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <script type="module" src="dashboard-aluno.js"></script>
+
+        </body>
+</html>

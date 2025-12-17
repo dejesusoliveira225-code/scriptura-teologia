@@ -68,11 +68,12 @@ nav a:hover {
     border-radius: 50%;
     background: rgba(255,255,255,0.7);
     position: relative;
-    transition: transform 0.4s;
+    transition:0.4s;
 }
 
 #logo img:hover {
     transform: scale(1.1);
+    transition:0.4s;
 }
 
 #logo h1 {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professor</title>
+<link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+
+<h2>Painel do Professor</h2>
+
+<h3>Alunos Cadastrados</h3>
+<ul id="listaAlunos"></ul>
+
+<hr>
+
+<form id="notaForm">
+  <input id="aluno" placeholder="Nome do aluno" list="alunosList" required>
+  <datalist id="alunosList"></datalist>
+  <input id="disciplina" placeholder="Disciplina" required>
+  <input id="nota" type="number" placeholder="Nota" required>
+  <textarea id="comentario" placeholder="Comentário... (opcional)"></textarea>
+  <button>Salvar</button>
+</form>
+
+<hr>
+
+<h3>Notas Lançadas</h3>
+<ul id="listaNotas"></ul>
+
+<div id="paginacao"></div>
+
+<button onclick="logout()">Sair</button>
+
+<script type="module" src="dashboard-professor.js"></script>
+
+</body>
+</html>
