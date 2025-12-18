@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Area do Professor</title>
+<link rel="stylesheet" href="./dashboard-professor.css">
+</head>
+<body>
+
+ <header>
+        <nav class="logo">
+            <img src="./img/logo.png" alt="SCRIPTURA INSTITUTO TEOLÓGICO">
+                <h2>SCRIPTURA INSTITUTO TEOLÓGICO</h2>
+        </nav>
+        <button class="btn" onclick="logout()">Sair</button>
+  </header>
+
+  <div style="clear: both;" class="titulo">
+    <h2>Painel do Professor</h2>
+    <h3>Alunos Cadastrados</h3>
+  </div>
+
+  <section class="container">
+
+    <section id="alunosSection">
+      <ul id="listaAlunos"></ul>
+    </section>
+
+      <section class="campo">
+        <form id="notaForm">
+          <input id="aluno" placeholder="Nome do aluno" list="alunosList" required>
+          <datalist id="alunosList"></datalist>
+          <input id="disciplina" placeholder="Disciplina" required>
+          <input id="nota" type="number" placeholder="Nota" required>
+          <textarea id="comentario" placeholder="Comentário... (opcional)"></textarea>
+          <br>
+          <button>Salvar</button>
+        </form>
+      </section>
+    </section>
+    <hr>
+    <section class="notas">
+      <h3>Notas Lançadas</h3>
+      <div class="notas-container">
+        <ul id="listaNotas"></ul>
+
+        <div id="paginacao"></div>
+      </div>
+    </section>
+
+    
+
+  <script type="module" src="dashboard-professor.js"></script>
+
+</body>
+</html>
