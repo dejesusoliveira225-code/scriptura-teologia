@@ -20,6 +20,7 @@ const lista = document.getElementById("lista");
 const paginacao = document.getElementById("paginacao");
 const graficoCanvas = document.getElementById("grafico").getContext("2d");
 let grafico = null;
+const listaVideos = document.getElementById("listaVideos");
 
 auth.onAuthStateChanged(async user => {
   const snapUser = await getDoc(doc(db, "users", user.uid));
@@ -35,6 +36,7 @@ auth.onAuthStateChanged(async user => {
 
   desenharPagina();
   gerarGrafico();
+  carregarVideos();
 });
 
 function desenharPagina(){
@@ -43,22 +45,19 @@ function desenharPagina(){
 
   const inicio = (paginaAtual - 1) * porPagina;
   const fim = inicio + porPagina;
+  const page = notasAluno.slice(inicio, fim);
 
-  const pagina = notasAluno.slice(inicio, fim);
-
-  pagina.forEach(n => {
+  page.forEach(n => {
     lista.innerHTML += `<li>${n.disciplina}: ${n.nota} — ${n.comentario || "Sem comentário"}</li>`;
   });
 
-  const totalPaginas = Math.ceil(notasAluno.length / porPagina);
+  let total = Math.ceil(notasAluno.length / porPagina);
 
-  if(totalPaginas > 1){
-    if(paginaAtual > 1){
+  if(total > 1){
+    if(paginaAtual > 1)
       paginacao.innerHTML += `<button onclick="mudarPag(${paginaAtual-1})">Anterior</button>`;
-    }
-    if(paginaAtual < totalPaginas){
+    if(paginaAtual < total)
       paginacao.innerHTML += `<button onclick="mudarPag(${paginaAtual+1})">Próxima</button>`;
-    }
   }
 }
 
@@ -77,15 +76,35 @@ function gerarGrafico(){
       labels: notasAluno.map(n => n.disciplina),
       datasets: [{
         label: "Notas",
-        data: notasAluno.map(n => n.nota),
+        data: notasAluno.map(n => n.nota)
       }]
     }
   });
 }
 
-document.getElementById("btnPDF").onclick = async () => {
-  const { jsPDF } = window.jspdf;
+async function carregarVideos(){
+  listaVideos.innerHTML = "";
 
+  const snap = await getDocs(collection(db, "videoaulas"));
+
+  snap.forEach(v => {
+    const aula = v.data();
+    const li = document.createElement("li");
+
+    li.innerHTML = `
+      <strong>${aula.titulo}</strong><br>
+      ${aula.descricao}<br>
+      <iframe width="300" height="200"
+        src="${aula.url.replace("watch?v=", "embed/")}"
+        frameborder="0" allowfullscreen></iframe>
+    `;
+
+    listaVideos.appendChild(li);
+  });
+}
+
+document.getElementById("btnPDF").onclick = () => {
+  const { jsPDF } = window.jspdf;
   const docPDF = new jsPDF();
 
   docPDF.setFontSize(16);
@@ -95,11 +114,11 @@ document.getElementById("btnPDF").onclick = async () => {
 
   notasAluno.forEach(n => {
     docPDF.text(`${n.disciplina}: ${n.nota}`, 10, y);
-    docPDF.text(`Comentário: ${n.comentario || "Sem comentário"}`, 10, y+6);
+    docPDF.text(`Comentário: ${n.comentario || "Sem"}`, 10, y+6);
     y += 12;
   });
 
-  const img = graficoCanvas.canvas.toDataURL("image/png");
+  const img = graficoCanvas.canvas.toDataURL();
   docPDF.addImage(img, "PNG", 10, y, 180, 80);
 
   docPDF.save(`boletim-${nomeAluno}.pdf`);

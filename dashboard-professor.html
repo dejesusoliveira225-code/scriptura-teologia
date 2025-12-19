@@ -26,20 +26,38 @@
     <section id="alunosSection">
       <ul id="listaAlunos"></ul>
     </section>
-
-      <section class="campo">
-        <form id="notaForm">
-          <input id="aluno" placeholder="Nome do aluno" list="alunosList" required>
-          <datalist id="alunosList"></datalist>
-          <input id="disciplina" placeholder="Disciplina" required>
-          <input id="nota" type="number" placeholder="Nota" required>
-          <textarea id="comentario" placeholder="Comentário... (opcional)"></textarea>
-          <br>
-          <button>Salvar</button>
+                  <!---------------------------------------
+                  --------------NOTAS---------------------
+                  ---------------------------------------->
+    <section class="campo">
+      <h3>Lançar Notas</h3>
+      <form id="notaForm">
+        <input id="aluno" placeholder="Nome do aluno" list="alunosList" required>
+        <datalist id="alunosList"></datalist>
+        <input id="disciplina" placeholder="Disciplina" required>
+        <input id="nota" type="number" placeholder="Nota" required>
+        <textarea id="comentario" placeholder="Comentário... (opcional)"></textarea>
+        <button>Salvar</button>
         </form>
       </section>
+                  <!---------------------------------------
+                  --------------AULAS---------------------
+                  ---------------------------------------->
+    <section class="campo">
+      <h3>Postar Vídeo Aula</h3>
+      <form id="formVideo">
+        <input id="tituloVideo" placeholder="Título do vídeo" required>
+        <textarea id="descVideo" placeholder="Descrição do vídeo" required></textarea>
+        <input id="urlVideo" placeholder="Link do vídeo (YouTube)" required>
+        <button>Publicar Vídeo</button>
+        </form>
     </section>
-    <hr>
+  </section>
+
+  <hr>
+  
+  <section id="add">
+
     <section class="notas">
       <h3>Notas Lançadas</h3>
       <div class="notas-container">
@@ -49,6 +67,16 @@
       </div>
     </section>
 
+    <section class="aulas">
+      <h3>Aulas Lançadas</h3>
+      <div class="aulas-container">
+        <ul id="listaVideos"></ul>
+
+        <div id="paginacao"></div>
+      </div>
+
+    </section>
+  </section>
     
 
   <script type="module" src="dashboard-professor.js"></script>

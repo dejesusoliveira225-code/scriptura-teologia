@@ -1,44 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aluno</title>
-    <link rel="stylesheet" href="./dashboard-aluno.css">
-    </head>
-        <body>
-            
-            <header>
-                    <nav class="logo">
-                        <img src="./img/logo.png" alt="SCRIPTURA INSTITUTO TEOLÓGICO">
-                            <h2>SCRIPTURA INSTITUTO TEOLÓGICO</h2>
-                    </nav>
-                    <button class="btn" onclick="logout()">Sair</button>
-            </header>
+<head>
+<meta charset="UTF-8">
+<title>Aluno</title>
+<link rel="stylesheet" href="./dashboard-aluno.css">
+</head>
+<body>
+    <header>
+        <nav class="logo">
+            <img src="./img/logo.png" alt="SCRIPTURA INSTITUTO TEOLÓGICO">
+                <h2>SCRIPTURA INSTITUTO TEOLÓGICO</h2>
+        </nav>
+        <button class="btn" onclick="logout()">Sair</button>
+    </header>
 
-            <section class="notas">
-                <h2>Minhas Notas</h2>
-            <hr>
-                <div class="lista">
-                    <ul id="lista"></ul>
+    <section class="container">
+        <section class="notas">
+            <h2>Minhas Notas</h2>
+            <button id="btnPDF">Baixar PDF</button>
+            <ul id="lista"></ul>
+            <div id="paginacao"></div>
+        </section>
+        <div>
+        <canvas id="grafico" width="300" height="200"></canvas>
+        </div>
+    </section>
+<hr>
 
-                    <div id="paginacao"></div>
+<h2>Vídeo Aulas</h2>
+<ul id="listaVideos"></ul>
 
-                </div>
-            <hr>
-                <div>
-                    <canvas id="grafico" width="400" height="300" style="background:white;
-                    margin:15px auto;
-                    display:block;"></canvas>
-                </div>
+<button onclick="logout()">Sair</button>
 
-                <button id="btnPDF">Baixar boletim PDF</button>
-            </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="dashboard-aluno.js"></script>
 
-            <script type="module" src="dashboard-aluno.js"></script>
-
-        </body>
+</body>
 </html>

@@ -34,11 +34,16 @@ nav img {
   float: right;
 }
 
-button {
-  margin-top: 5px;
-  padding: 15px 26px;
+a:hover{
+  padding: 5px;
+  border-radius: 10px;
+}
+
+button{
+  margin: 5px;
+  padding: 8px 12px;
   border-radius: 12px;
-  border: none;
+  border: #CCD6E0 solid 1px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -46,7 +51,7 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+button:hover, a:hover{
     filter: brightness(1.1);
     transform: translateY(-1px);
     transition: 0.3s;
@@ -55,23 +60,20 @@ button:hover {
 }
 
 .titulo {
-  
   text-align: center;
 }
 
-.container{
+.container, #add{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  
 }
 
 
-#alunosSection, .notas-container, .campo{
-    
+#alunosSection, .aulas-container, .notas-container, .campo{
     height:auto;
-    width: 600px;
+    width: 420px;
     margin: 50px auto;
     display: block;
     background: #FFFFFF;
@@ -80,13 +82,15 @@ button:hover {
     box-shadow: 0 15px 35px rgba(31,60,136,0.15);
 }
 
+h3{
+  margin: 10px;
+}
 .campo {
     display: block;
     flex-direction: column;
 }
 
 .campo input {
-    font-size: 14px;
     margin-bottom: 10px;
     font-weight: 600;
     color: #162447;
@@ -96,15 +100,15 @@ button:hover {
 .campo input,
 .campo textarea {
     width: 100%;
-    padding: 15px 15px;
+    padding: 10px;
     border-radius: 10px;
     border: 1px solid #CCD6E0;
-    font-size: 14px;
+    font-size: 15px;
     transition: all 0.3s ease;
 }
 
 .campo textarea {
-    resize: vertical;
+    height: 150px;
 }
 
 .campo input:focus,
@@ -113,6 +117,7 @@ button:hover {
     outline: none;
     border-color: #1EB6E8;
     box-shadow: 0 0 0 3px rgba(30,182,232,0.25);
+    transition: 0.5s;
 }
 
 ul{
@@ -120,12 +125,13 @@ ul{
 }
 
 ul li{
+  font-size: 14px;
   border-radius: 6px;
-  margin: 6px auto;
+  margin: 5px;
   width: auto;
 }
 
-#listaAlunos li{
+#listaAlunos li, #listaVideos li{
   margin: 3px;
   padding: 5px;
   border-radius: 4px;
@@ -133,6 +139,10 @@ ul li{
   transition: 0.3s;
 }
 
+#listaVideos li{
+  font-size: 15px;
+  margin: 8px;
+}
 #listaAlunos:hover{
   outline: none;
   border-radius: 5px;
@@ -142,14 +152,13 @@ ul li{
   transition: 0.3s;
 }
 
-.notas{
+.notas, .aulas{
   margin: 30px auto;
   max-width: 700px;
-  min-width: none;
-  
+  min-width: 400px;
   text-align: center;
 }
 
-#listaNotas button{
+#listaNotas button, #listaVideos button{
   margin: 5px;
 }
