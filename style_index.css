@@ -184,12 +184,13 @@ footer a img {
     height: 38px;
     margin: 10px;
     transition: 0.3s;
-    filter: brightness(0.9);
+    transition: 0.3s;
 }
 
 footer a img:hover {
     filter: brightness(1.1);
     transition: 0.3s;
+    transform:scale(1.5);
 }
 
 #fim {
@@ -202,6 +203,7 @@ footer a img:hover {
 *********carrocel**************/
 
 .formatura h1{
+    padding: 50px 10px;
     margin: 50px;
     text-align: center;
     font-size: 25px;
@@ -259,10 +261,15 @@ footer a img:hover {
 RESPONSIVO
 =============================== */
 @media (max-width: 768px){
-    footer {
-        margin-top: 380px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+footer {
+    margin-top: 380px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+
+.carousel-images{
+    width: 400px;
+}
+}
+
