@@ -87,3 +87,28 @@ section{
     background: #1F3C88;
     transform: translateY(-1px);
 }
+
+
+/* ===============================
+RESPONSIVO
+=============================== */
+@media (max-width: 768px) {
+    header .logo {
+        flex-direction: column;
+        text-align: center;
+        font-size: 12px;
+    }
+
+
+
+    .botao {
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: 380px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

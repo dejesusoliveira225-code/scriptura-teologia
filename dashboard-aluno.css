@@ -102,3 +102,29 @@ canvas{
     font-size: 15px;
     margin: 15px;
 }
+
+/* ===============================
+RESPONSIVO
+=============================== */
+@media (max-width: 768px) {
+.logo {
+  flex-direction: column;
+  text-align: center;
+  font-size: 12px;
+}
+
+.btn{
+  position: relative;
+  left: -10px;
+}
+}
+
+.aulas{
+    width: 80%;
+    align-items: center;
+}
+
+.container{
+    padding-left: 80px;
+    width: 80%;
+}

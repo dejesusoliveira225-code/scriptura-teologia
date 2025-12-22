@@ -8,7 +8,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: #F4F6F8;
+    background: #ffffff;
     color: #162447;
 }
 
@@ -76,6 +76,7 @@ nav a:hover {
     background: rgba(255,255,255,0.7);
     position: relative;
     transition:0.4s;
+    box-shadow: 5px 15px 35px rgba(31, 61, 136, 0.479);
 }
 
 #logo img:hover {
@@ -122,11 +123,13 @@ nav a:hover {
     border: 2px solid #0d2440;
     border-radius: 10px;
     transition: 0.3s;
+    box-shadow: 5px 15px 35px rgba(31, 61, 136, 0.267);
 }
 
 .card:hover {
-    transform: scale(1.05);
-    transition: 0.3s
+    transform: scale(1.009);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 /* Fundo dos cards */
@@ -173,6 +176,7 @@ footer img {
     height: 40px;
     border-radius: 50%;
     background: rgba(255,255,255,0.7);
+    box-shadow: 5px 15px 35px rgba(31, 61, 136, 0.267);
 }
 
 footer a img {
@@ -192,4 +196,73 @@ footer a img:hover {
     text-align: center;
     padding: 20px;
     font-size: 0.8em;
+}
+
+/******************************
+*********carrocel**************/
+
+.formatura h1{
+    margin: 50px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#formaturas{
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.carousel-images{
+    margin: 15px;
+    width: 600px;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 14px;
+    box-shadow: 5px 15px 35px rgba(31, 61, 136, 0.267);
+    transition: 0.3s;
+}
+
+.carousel-images:hover{
+    cursor: pointer;
+    transform: scale(1.005);
+    filter: brightness(1.1);
+    transition: 0.3s;
+}
+
+.carousel-images h2{
+    padding: 20px;
+}
+
+.carousel-images img{
+    width: 100%;
+    position: absolute;
+    animation: slide 9s infinite;
+    opacity: 0;
+}
+
+.carousel-images img:nth-child(1) { animation-delay: 0s; }
+.carousel-images img:nth-child(2) { animation-delay: 3s; }
+.carousel-images img:nth-child(3) { animation-delay: 6s; }
+
+@keyframes slide {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+}
+
+/* ===============================
+RESPONSIVO
+=============================== */
+@media (max-width: 768px){
+    footer {
+        margin-top: 380px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
