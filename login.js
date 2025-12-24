@@ -21,13 +21,18 @@ form.addEventListener("submit", async (e) => {
       return;
     }
 
-    const role = snap.data().role;
 
-    if (role === "professor") {
-      location.href = "dashboard-professor.html";
-    } else {
-      location.href = "dashboard-aluno.html";
-    }
+const role = snap.data().role;
+
+if (role === "admin") {
+  location.href = "admin.html";
+} else if (role === "professor") {
+  location.href = "dashboard-professor.html";
+} else if (role === "aluno") {
+  location.href = "dashboard-aluno.html";
+} else {
+  alert("Papel de usuário desconhecido.");
+}
 
   } catch (err) {
     alert("Login inválido");

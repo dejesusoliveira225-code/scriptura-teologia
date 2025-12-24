@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: #F4F6F8;
+    color: #162447;
+}
+nav {
+    background: linear-gradient(90deg, #1f3d8807, #5282fd93);
+    padding: 20px;
+    color: #000000;
+
+}
+
+nav h2{
+    margin-right: 750px;
+}
+
+
+a{
+    text-decoration: none;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav img {
+    height: 65px;
+}
+
+button, a{
+    color: #000000;
+    background-color: #FFFFFF;
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: #CCD6E0 solid 1px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transition: 0.3s;
+}
+
+button:hover, a:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    transition: 0.3s;
+    background: #1F3C88;
+    color: white;
+}
+
+.campo{
+    text-align: center;
+    height:auto;
+    width: 400px;
+    margin: 50px auto;
+    display: block;
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 15px 35px rgba(31,60,136,0.15);
+}
+
+#h2-cadastro{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.campo input:focus,
+.campo select {
+    outline: none;
+    border-color: #1EB6E8;
+    box-shadow: 0 0 0 3px rgba(30,182,232,0.25);
+    transition: 0.5s;
+}
+
+.campo input, 
+.campo select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #CCD6E0;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+
+/* ===============================
+RESPONSIVO
+=============================== */
+@media (max-width: 768px) {
+.logo {
+  flex-direction: column;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+}

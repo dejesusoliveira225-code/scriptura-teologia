@@ -271,5 +271,14 @@ footer {
 .carousel-images{
     width: 400px;
 }
+
+nav a{
+    padding: 18px;
+    margin-left: 5px;
+}
+
+.descricao{
+    padding: 5px;
+}
 }
 

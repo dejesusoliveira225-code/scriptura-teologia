@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dashboard-admin.css">
+  <title>Cadastro</title>
+</head>
+
+<body>
+  <header>
+        <nav class="logo">
+            <img src="./img/logo.png" alt="SCRIPTURA INSTITUTO TEOLÓGICO">
+            <h2>SCRIPTURA INSTITUTO TEOLÓGICO</h2>
+            <a href="login.html">Sair</a>
+        </nav>
+    </header>
+
+<h2 id="h2-cadastro">Criar conta</h2>
+
+<form id="formCadastro" class="campo">
+  <input type="text" id="nome" placeholder="Nome completo" required><br><br>
+
+  <input type="email" id="email" placeholder="Email" required><br><br>
+
+  <input type="password" id="senha" placeholder="Senha" required><br><br>
+
+  <label for="role">Tipo de Perfil:</label>
+  <select id="role" required>
+    <option value="aluno">Aluno</option>
+    <option value="professor">Professor</option>
+    <option value="admin">Administrador</option>
+  </select>
+
+  <button type="submit">Cadastrar</button>
+</form>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>

@@ -85,6 +85,12 @@ button:hover, a:hover{
 h3{
   margin: 10px;
 }
+
+#h2-cadastro{
+  margin-top: 50px;
+  text-align: center;
+}
+
 .campo {
     display: block;
     flex-direction: column;
@@ -97,7 +103,8 @@ h3{
     width: 100%;
 }
 
-.campo input,
+.campo input, 
+.campo select,
 .campo textarea {
     width: 100%;
     padding: 10px;
@@ -143,7 +150,8 @@ ul li{
   font-size: 15px;
   margin: 8px;
 }
-#listaAlunos:hover{
+#listaAlunos li:hover,
+#listaVideos li:hover{
   outline: none;
   border-radius: 5px;
   border-color: #1EB6E8;

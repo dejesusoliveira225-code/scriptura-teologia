@@ -1,22 +1,30 @@
-import { auth, db } from './firebase.js';
-import { onAuthStateChanged } from 
-"https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import { doc, getDoc } from 
-"https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { auth, db } from "./firebase.js";
 
-export function protegerPagina(rolePermitido) {
-  onAuthStateChanged(auth, async user => {
-    if (!user) {
-      window.location.href = 'login.html';
-      return;
-    }
+import {
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-    const ref = doc(db, 'users', user.uid);
-    const snap = await getDoc(ref);
+import {
+  doc,
+  getDoc
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-    if (!snap.exists() || snap.data().role !== rolePermitido) {
-      alert('Acesso negado');
-      window.location.href = 'login.html';
-    }
-  });
-}
+onAuthStateChanged(auth, async user => {
+  if (!user) return;
+
+  const snap = await getDoc(doc(db, "users", user.uid));
+
+  if (!snap.exists()) return;
+
+  const role = snap.data().role;
+
+  if (role === "admin") {
+    window.location.href = "admin.html";
+  }
+  else if (role === "professor") {
+    window.location.href = "dashboard-professor.html";
+  }
+  else if (role === "aluno") {
+    window.location.href = "dashboard-aluno.html";
+  }
+});

@@ -11,65 +11,6 @@ import {
 
 proteger("professor");
 
-/* =========================
-    VÍDEO AULAS
-========================= */
-
-const listaVideos = document.getElementById("listaVideos");
-
-async function carregarVideos() {
-  listaVideos.innerHTML = "";
-
-  const snap = await getDocs(collection(db, "videoaulas"));
-
-  snap.forEach(v => {
-    const aula = v.data();
-
-    const li = document.createElement("li");
-    li.innerHTML = `
-      <strong>${aula.titulo}</strong><br>
-      ${aula.descricao}<br>
-      <a href="${aula.url}" target="_blank">Assistir</a><br>
-      <button onclick="excluirVideo('${v.id}')">Excluir</button>
-    `;
-    listaVideos.appendChild(li);
-  });
-}
-
-document.getElementById("formVideo")?.addEventListener("submit", async e => {
-  e.preventDefault();
-
-  const titulo = document.getElementById("tituloVideo").value;
-  const descricao = document.getElementById("descVideo").value;
-  const url = document.getElementById("urlVideo").value;
-
-  if (!url.includes("youtube") && !url.includes("youtu.be")) {
-    alert("Insira um link válido do YouTube!");
-    return;
-  }
-
-  await addDoc(collection(db, "videoaulas"), {
-    titulo,
-    descricao,
-    url
-  });
-
-  alert("Vídeo publicado!");
-  carregarVideos();
-});
-
-window.excluirVideo = async (id) => {
-  if (confirm("Remover vídeo?")) {
-    await deleteDoc(doc(db, "videoaulas", id));
-    carregarVideos();
-  }
-};
-
-
-/* =========================
-      LANÇAMENTO DE NOTAS
-========================= */
-
 const listaNotas = document.getElementById("listaNotas");
 const alunosList = document.getElementById("alunosList");
 const listaAlunos = document.getElementById("listaAlunos");
@@ -107,14 +48,15 @@ async function carregarNotas() {
   todasNotas = [];
 
   const snap = await getDocs(collection(db, "notas"));
-  snap.forEach(n => todasNotas.push({ id: n.id, ...n.data() }));
 
-  todasNotas.sort((a, b) => a.disciplina.localeCompare(b.disciplina));
+  snap.forEach(d => todasNotas.push({ id: d.id, ...d.data() }));
+
+  todasNotas.sort((a,b) => a.disciplina.localeCompare(b.disciplina));
 
   desenharPagina();
 }
 
-function desenharPagina() {
+function desenharPagina(){
   listaNotas.innerHTML = "";
   paginacao.innerHTML = "";
 
@@ -137,12 +79,12 @@ function desenharPagina() {
 
   const totalPaginas = Math.ceil(todasNotas.length / porPagina);
 
-  if (totalPaginas > 1) {
-    if (paginaAtual > 1) {
-      paginacao.innerHTML += `<button onclick="mudarPag(${paginaAtual - 1})">Anterior</button>`;
+  if(totalPaginas > 1){
+    if(paginaAtual > 1){
+      paginacao.innerHTML += `<button onclick="mudarPag(${paginaAtual-1})">Anterior</button>`;
     }
-    if (paginaAtual < totalPaginas) {
-      paginacao.innerHTML += `<button onclick="mudarPag(${paginaAtual + 1})">Próxima</button>`;
+    if(paginaAtual < totalPaginas){
+      paginacao.innerHTML += `<button onclick="mudarPag(${paginaAtual+1})">Próxima</button>`;
     }
   }
 }
@@ -152,7 +94,7 @@ window.mudarPag = (p) => {
   desenharPagina();
 };
 
-document.getElementById("notaForm")?.addEventListener("submit", async e => {
+document.getElementById("notaForm").addEventListener("submit", async e => {
   e.preventDefault();
 
   const aluno = document.getElementById("aluno").value;
@@ -173,11 +115,12 @@ document.getElementById("notaForm")?.addEventListener("submit", async e => {
   });
 
   alert("Lançada!");
+
   carregarNotas();
 });
 
 window.excluirNota = async (id) => {
-  if (confirm("Excluir?")) {
+  if(confirm("Excluir?")){
     await deleteDoc(doc(db, "notas", id));
     carregarNotas();
   }
@@ -201,18 +144,10 @@ window.editarNota = async (id, alunoAtual, disciplinaAtual, notaAtual, comentari
   carregarNotas();
 };
 
-
-/* =========================
-     BOTÃO SAIR
-========================= */
-
 window.logout = sair;
 
-
-/* =========================
-  CARREGAMENTOS INICIAIS
-========================= */
-
-carregarVideos();
 carregarAlunos();
 carregarNotas();
+
+
+
