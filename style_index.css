@@ -127,7 +127,7 @@ nav a:hover {
 }
 
 .card:hover {
-    transform: scale(1.009);
+    transform: scale(1.05);
     transition: 0.3s;
     cursor: pointer;
 }
@@ -135,8 +135,8 @@ nav a:hover {
 /* Fundo dos cards */
 #bruno, #rebeca, #ronivon, #sergio, #walberto {
     background-repeat: no-repeat;
-    background-size: 220px;
-    background-position: center right;
+    background-size: 190px;
+    background-position: right bottom;
 }
 
 #bruno { background-image: url("./img/bruno.png"); }
